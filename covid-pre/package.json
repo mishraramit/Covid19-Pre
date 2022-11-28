@@ -1,0 +1,14 @@
+{
+  "name": "covid-19-project",
+  "version": "1.0.0",
+  "description": "Covid Probability Checking \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001bTest result\u001b[C\u001b[C\u001b[C\u001b[CX-Ray \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001bn:ollege project\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[P\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[DCollege Project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ramit Ranjan Mishra",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs": "^3.3.0"
+  }
+}

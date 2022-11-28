@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Input</title>
+    <style>
+        body {
+            margin: 0%;
+            background: rgb(0, 0, 0);
+            padding: 4%;
+            padding-top: 0%;
+        }
+        
+        
+        
+        .card {
+            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
+            transition: 0.3s;
+            width: 80%;
+        }
+        
+        .card:hover {
+            box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.658);
+        }
+        .card1:hover {
+            text-align: auto;
+            box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.658);
+        }
+        .container {
+            margin: 0%;
+            /* height: 170px; */
+            border: 2px solid white;
+            border-radius: 15px;
+            padding: 2px 16px;
+            /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4); */
+            
+        }
+        
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        
+        
+        .card {
+            width:660px;
+            background-color: #fff;
+            border: 2px solid white;
+            border-radius: 15px;
+            margin:1%;
+        }
+        .card1{
+            
+            z-index: 12;
+            background-color: #fff;
+            border: 2px solid white;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+        }
+        .card2{
+            
+            background-color: #fff;
+            border: 2px solid white;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            height: 80px;
+            width: 200px;
+        }
+        .card2:hover{
+            box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4);
+        }
+        
+        .result{
+            margin:1.5%;
+            margin-bottom: 2%;
+            width: 210px;
+        }
+        .result2{
+            margin-top: 5%;
+            width: 350px;
+            height:180px;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        
+        .btn {
+            
+            background: #c9e3f5;
+            background-image: -webkit-linear-gradient(top, #c9e3f5, #4b4b4b);
+            background-image: -moz-linear-gradient(top, #c9e3f5, #4b4b4b);
+            background-image: -ms-linear-gradient(top, #c9e3f5, #4b4b4b);
+            background-image: -o-linear-gradient(top, #c9e3f5, #4b4b4b);
+            background-image: linear-gradient(to bottom, #c9e3f5, #4b4b4b);
+            -webkit-border-radius: 28;
+            -moz-border-radius: 28;
+            border-radius: 8px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background: #aacbe0;
+            background-image: -webkit-linear-gradient(top, #aacbe0, #4b4b4b);
+            background-image: -moz-linear-gradient(top, #aacbe0, #4b4b4b);
+            background-image: -ms-linear-gradient(top, #aacbe0, #4b4b4b);
+            background-image: -o-linear-gradient(top, #aacbe0, #4b4b4b);
+            background-image: linear-gradient(to bottom, #aacbe0, #4b4b4b);
+            text-decoration: none;
+        }
+        
+        
+        .mainbox {
+            margin: 0%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+            width: 100%;
+            height: 80%;
+            display: flex;
+            flex-direction: row;
+            border-radius: 15px;
+            /* border : 2px solid rgb(18, 80, 59); */
+            background-color: rgb(255, 255, 255);
+        }
+        
+        .client {
+            margin: 0%;
+            background-color: rgb(209, 209, 209);
+            border: 1px solid rgb(32, 32, 32);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            width: 70%;
+            height: 80%;
+            padding: 2%;
+            min-height: auto;
+        }
+        
+        .family {
+            margin: 0%;
+            /* background-color: rgb(168, 243, 243); */
+            padding-top: 5%;
+            border-radius: 15px;
+            max-width: 20%;
+            min-height: auto;
+        }
+        
+        .photo {
+            margin: 0%;
+            margin-top: 3%;
+            display: block;
+            margin-left: 32%;
+            width: 30%;
+        }
+        
+        .mainbox ul {
+            text-align: center;
+            margin:0%;
+            text-decoration: none;
+            /* width: 340px; */
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            overflow-x: auto;
+            
+        }
+        
+        .mainbox li {
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+            /* height: 100px; */
+            /* width: 100px; */
+            /* margin: 1%; */
+            text-align: center;
+            align-items: center;
+        }
+        
+    
+        
+        
+        .container1:before {
+            margin: 0%;
+            content: "";
+            position: absolute;
+            height: 2000px;
+            width: 2000px;
+            /* top: -10%; */
+            right: 88%;
+            transform: translateY(-50%);
+            transition: 1.8s ease-in-out;
+            border-radius: 50%;
+            
+        }
+        .container1:before {
+            z-index: -40;
+            width: 2000px;
+            height: 2000px;
+            transform: translate(-80%);
+            left: 20%; 
+            bottom: -70%; 
+            right: 50%;
+            top: initial;
+            background-image: linear-gradient(-45deg, #000000 10%, #c9c9c9 90%);
+            
+        }
+        .box{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+
+  body {
+    font-family: sans-serif;
+  }
+  
+  .Menu-Bar {
+    width: auto;
+  
+    background: rgb(3, 24, 3);
+  
+    text-align: center;
+  }
+  
+  .Menu-Bar ul {
+    display: inline-flex;
+  
+    list-style: none;
+  
+    color: aliceblue;
+  }
+  
+  .Menu-Bar li {
+    width: 120px;
+  
+    margin: 10px;
+    padding: 10px;
+}
+.Menu-Bar ul li a {
+    text-decoration: none;
+    /* text-align: center; */
+  
+    color: aliceblue;
+  }
+  
+  .active,
+  .Menu-Bar ul li:hover {
+    border-bottom:4px solid #ff000d;
+  
+    border-radius: 3px;
+  }
+  
+  .Menu-Bar .fa {
+    margin-right: 8px;
+  }
+  
+  .sub-menu-1 {
+    display: none;
+  }
+  .Menu-Bar ul li:hover .sub-menu-1 {
+    display: block;
+  
+    position: absolute;
+  
+    background-color: rgb(15, 15, 15);
+  
+    margin-top: 15px;
+  
+    margin-left: 15px;
+  }
+  
+  .Menu-Bar ul li:hover .sub-menu-1 ul {
+    display: block;
+  
+    margin: 10px;
+  }
+  
+  .Menu-Bar ul li:hover .sub-menu-1 ul li {
+    width: 150px;
+  
+    padding: 10px;
+  
+    border-bottom: 1px dotted #fff;
+  
+    background: transparent;
+  
+    border-radius: 0;
+  
+    text-align: left;
+  }
+  
+  .Menu-Bar ul li:hover .sub-menu-1 ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .Menu-Bar ul li:hover .sub-menu-1 ul li a:hover {
+    color: #0cf1de;
+  }
+  a{
+      text-align: center;
+  }
+        </style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="js/deploy.js"></script> -->
+    <script src="doctor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+
+</head>
+
+<body>
+    <!-- <div class="container1"></div> -->
+    <header>
+        <div class="Menu-Bar">
+            <ul>
+
+                <li ><a href="home.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+                <li><a href="index.html"><i class="fa fa-plus-square" aria-hidden="true"></i>Statistics</a>
+                    
+                 </li>
+                <li><a href="#"><i class="fa fa-user-secret" aria-hidden="true"></i>Individual</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="form.html">Stay At Home Covid Predictor</a></li>
+                        </ul>
+                    </div></li>
+               
+                    
+            <li class="active"><a href="#" ><i class="fa fa-user" aria-hidden="true"></i>Doctor</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="doctor.html">Chest X-RAY Scan Predictor</a></li>
+                </ul>
+             </div>
+            </li>
+            <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i>Get Help</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">contacts</a></li>
+                        <li><a href="#">files</a></li>
+                        <li><a href="#">professional Informations</a></li>
+                    </ul>
+                 </div>
+                 </li>
+            
+            <li><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i>Contact Us</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="#">Companies</a></li>
+                        <li><a href="#"> Mail</a></li>
+                        <li><a href="#">Personal Contacts</a></li>
+                    </ul>
+                 </div>
+                 </li>
+        </ul>
+    </div>
+</header>
+    <div class="mainbox">
+
+        <div class="client">
+            
+            <div class="card">
+
+                <div class="container">
+                    <h3><b>Welcome Doctor !</b></h3>
+                    
+                    <p>Lets check your clients health with us. Care with the online live Lungs problem detector</p>
+                </div>
+            </div>
+            <br><br>
+            <div class="box">
+    </div>
+    <form action="" method="get">
+
+        <h4>Patient details</h4>
+            <label class="label" for="name">Name</label>
+            <div>
+                <input class="input" type="text" name="myName" id="name">
+            </div>
+            <label class="label" for="class">Age</label>
+            <div>
+                <input class="input" type="text" name="myClass">
+            </div>
+            <label class="label" for="email">E-Mail</label>
+            <div>
+                <input class="input" type="email" name="myEmail">
+            </div>
+            <label class="label" for="date">Date</label>
+             
+            
+            <label for="gender">Gender</label>
+            <div>
+                Male <input type="radio" name="myGender"> Female <input type="radio" name="myGender"> other <input
+                    type="radio" name="myGender">
+            </div>
+            <div class="">
+                <input type="file" onchange="previewFile()"><br>
+            <img src="" height="200" alt="Image preview...">
+        
+                <!-- <img src="qwertyuiop.png" class="center" height="200px"> -->
+            </div>
+            <div>
+                <input class="input" type="submit" value="Submit Now">
+                <input class="input" type="reset" value="Reset Now">
+            </div>
+    
+
+    </form>
+    
+
+    
+    <!-- <Button class="btn">Upload</Button> -->
+    <!-- <Button class="btn ">Send</Button> -->
+
+</body>
+
+</html>

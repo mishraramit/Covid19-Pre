@@ -1,0 +1,43 @@
+<html>
+
+<head>
+
+  <script>
+    //classifier.js
+    var model = undefined;
+    var tf;
+    var predResult = document.getElementById("result");
+    async function initialize() {
+      model = await tf.loadLayersModel('model.json');
+    }
+    async function predict() {
+      // action for the submit button
+      let image = document.getElementById("img")
+      let tensorImg = tf.browser.fromPixels(image).resizeNearestNeighbor([200, 200]).toFloat().expandDims();
+      prediction = await model.predict(tensorImg).data();
+      if (prediction[0] === 0) {
+        predResult.innerHTML = "covid";
+      } else if (prediction[0] === 1) {
+        predResult.innerHTML = "norm";
+      } else {
+        predResult.innerHTML = "pnemonea";
+      }
+      show(predResult);
+    }
+   
+  </script>
+  <script src="/doctor.js"></script>
+</head>
+
+<body>
+  
+  <div class="cont">
+    <img id="img" src="094.png">
+    <div id="result"></div>
+  </div>
+</body>
+
+
+
+<script src="/doctor.js"></script>
+</html>
